@@ -87,9 +87,12 @@ Indri	| LM Dirichlet | ✔	   | ✔	   | 0.2381  | 0.0984  | 0.2486  | --	   | 0
 
 
 You can find runs and *trec_eval* results at: 
-+[Terrier](https://github.com/mmaistro/IR-Reproducibility/tree/mmaistro)
-+[Lucene](https://github.com/dibuccio/IR-Reproducibility)
-+[Indri](https://github.com/gmdn/IR-reproducibiliy-grium)
+
+* [Terrier results](https://github.com/mmaistro/IR-Reproducibility/tree/mmaistro)
+
+* [Lucene results](https://github.com/dibuccio/IR-Reproducibility)
+
+* [Indri results](https://github.com/gmdn/IR-reproducibiliy-grium)
 
 ## Credits
 
