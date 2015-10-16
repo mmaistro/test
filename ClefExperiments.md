@@ -39,89 +39,29 @@ Swedish		| AH Mono SV 		| 91-109; 111-159; 161-166; <br /> 168-190; 192-193; 195
 
 # Retrieval Effectiveness
 
-For the TREC collection there were a total of 7 systems that provided such scripts: ATIRE, Galago, Indri, JASS, Lucene, MG4J, and Terrier. The scripts were free to index and search with varying parameters. As a result, a total of 13 different indexes were generated, and 17 sets of search results. For the CLEF collections there were 3 systems together with their required scripts: Indri, Lucene, Terrier; in the case of Terrier different retrieval models (BM25, Hiemstra LM, PL2, and TFIDF) were experimented in conjunction with different configurations for [stop lists](http://members.unine.ch/jacques.savoy/clef/index.html) and [stemmers](https://github.com/snowballstem). All the details about the experiments (MAP@1000 calculated by trec_eval are reported in the table below.
+For the TREC collection there were a total of 7 systems that provided such scripts: ATIRE, Galago, Indri, JASS, Lucene, MG4J, and Terrier. The scripts were free to index and search with varying parameters. As a result, a total of 13 different indexes were generated, and 17 sets of search results. For the CLEF collections there were 3 systems together with their required scripts: Indri, Lucene, Terrier; in the case of Terrier different retrieval models (BM25, Hiemstra LM, PL2, and TFIDF) were experimented in conjunction with different configurations for [stop lists](http://members.unine.ch/jacques.savoy/clef/index.html) and [stemmers](https://github.com/snowballstem). All the details about the experiments (MAP@1000 calculated by *trec_eval* are reported in the table below.
 
 
 System  | Model 	   | Stop  | Stem  | bg      | de      | es      | fa      | fi      | fr      |
-
-:-------| :----------- | :---- | :---- | :------ | :------ | :------ | :------ | :------ | :------ |
+:-------|:-------------|:------|:------|:--------|:--------|:--------|:--------|:--------|:--------|
 Terrier | BM25         |   	   |       | 0.2092  | 0.2733  | 0.3627  | 0.4033  | 0.3464	 | --	   |
-
-
-	Terrier 	& BM25			& \checkmark	& 			& 0.2081 	& 0.2742 	& 0.3656 	& 0.4022	& 0.3392	& --	\\
-	Terrier 	& BM25			&			& \checkmark	& -- 		& 0.3194 	& 0.4347 	& -- 		& 0.4339	& --	\\
-	Terrier 	& BM25			& \checkmark	& \checkmark	& -- 		& 0.3215 	& 0.4356 	& --		& 0.4278	& --	\\
-
-	Terrier 	& Hiemstra LM		& 			&			& 0.1647	& 0.2520 	& 0.3016 	& 0.3140	& 0.3125	& --	\\
-	Terrier 	& Hiemstra LM		& \checkmark	& 			& 0.1640	& 0.2561 	& 0.3081 	& 0.3193	& 0.3156	& --	\\
-	Terrier 	& Hiemstra LM		&			& \checkmark	& -- 		& 0.2753 	& 0.3673 	& -- 		& 0.3639	& --	\\
-	Terrier 	& Hiemstra LM		& \checkmark	& \checkmark	& -- 		& 0.2801 	& 0.3783 	& -- 		& 0.3636	& --	\\
-
-	Terrier 	& PL2			& 			&			& 0.2043	& 0.2625 	& 0.3486 	& 0.4081	& 0.3316	& --	\\
-	Terrier 	& PL2			& \checkmark	& 			& 0.2009	& 0.2658 	& 0.3572 	& 0.4061	& 0.3388	& --	\\
-	Terrier 	& PL2			&			& \checkmark	& -- 		& 0.3080 	& 0.4168 	& -- 		& 0.4222	& --	\\
-	Terrier 	& PL2			& \checkmark	& \checkmark	& --		& 0.3102 	& 0.4211 	& -- 		& 0.4152	& --	\\
-
-	Terrier 	& TFIDF			& 			&			& 0.2071	& 0.2709 	& 0.3597 	& 0.4050	& 0.3457	& --	\\
-	Terrier 	& TFIDF			& \checkmark	& 			& 0.2083	& 0.2723 	& 0.3658 	& 0.4053	& 0.3393	& --	\\
-	Terrier 	& TFIDF			&			& \checkmark	& -- 		& 0.3185 	& 0.4313 	& -- 		& 0.4354	& --	\\
-	Terrier 	& TFIDF			& \checkmark	& \checkmark	& --		& 0.3167 	& 0.4355 	& -- 		& 0.4269	& --	\\
-
-	Lucene	& BM25			& \checkmark	& \checkmark	& --		& 0.3126	& 0.4251	& 0.4158	& -- 		& 0.3865 \\
-	
-	Indri		& LM Dirichlet		& \checkmark	& \checkmark	& 0.2051	& 0.1365	& 0.3334	& 0.3735	& --		& 0.1444 \\
+Terrier | BM25		   | ✔ 	   |	   | 0.2081  | 0.2742  | 0.3656  | 0.4022  | 0.3392	 | --	   |
+Terrier | BM25		   |	   | ✔	   | -- 	 | 0.3194  | 0.4347  | -- 	   | 0.4339	 | --	   |
+Terrier | BM25		   | ✔	   | ✔     | --      | 0.3215  | 0.4356  | --      | 0.4278	 | --	   |
+Terrier | Hiemstra LM  |       |	   | 0.1647	 | 0.2520  | 0.3016  | 0.3140  | 0.3125	 | --	   |
+Terrier | Hiemstra LM  | ✔	   | 	   | 0.1640	 | 0.2561  | 0.3081  | 0.3193  | 0.3156	 | --      |
+Terrier | Hiemstra LM  |       | ✔	   | -- 	 | 0.2753  | 0.3673  | -- 	   | 0.3639	 | --	   |
+Terrier | Hiemstra LM  | ✔	   | ✔	   | -- 	 | 0.2801  | 0.3783  | -- 	   | 0.3636	 | --	   |
+Terrier | PL2		   | 	   |	   | 0.2043	 | 0.2625  | 0.3486  | 0.4081  | 0.3316	 | --	   |
+Terrier | PL2		   | ✔	   | 	   | 0.2009	 | 0.2658  | 0.3572  | 0.4061  | 0.3388	 | --      |
+Terrier | PL2		   |	   | ✔	   | --      | 0.3080  | 0.4168  | -- 	   | 0.4222	 | --	   |
+Terrier | PL2		   | ✔     | ✔     | --	     | 0.3102  | 0.4211  | -- 	   | 0.4152  | --	   |
+Terrier | TFIDF		   | 	   |	   | 0.2071	 | 0.2709  | 0.3597  | 0.4050  | 0.3457  | --	   |
+Terrier | TFIDF		   | ✔	   | 	   | 0.2083	 | 0.2723  | 0.3658  | 0.4053  | 0.3393	 | --	   |
+Terrier | TFIDF		   |	   | ✔	   | -- 	 | 0.3185  | 0.4313  | -- 	   | 0.4354  | --	   |
+Terrier | TFIDF		   | ✔	   | ✔	   | --		 | 0.3167  | 0.4355  | -- 	   | 0.4269	 | --	   |
+Lucene	| BM25   	   | ✔     | ✔	   | --	     | 0.3126  | 0.4251	 | 0.4158  | -- 	 | 0.3865  |
+Indri	| LM Dirichlet | ✔	   | ✔	   | 0.2051  | 0.1365  | 0.3334	 | 0.3735  | --		 | 0.1444  |
 	
 
 
-###### ATIRE
-+ The quantized index pre-calculates the BM25 scores at indexing time and stores these instead of term frequencies, more about the quantization in ATIRE can be found in [Crane et al. (2013)](http://dl.acm.org/citation.cfm?id=2507860).
-  + The quantization is performed single threaded although easily parallelized.
-+ Both indexes were not stemmed.
-+ Both indexes were pruned of SGML tags, used for typically unused search time features.
-+ Both indexes postings lists are stored impact ordered, with docids being compressed using variable-byte compression after being delta encoded.
-
-## Retrieval
-Both retrieval efficiency (by query latency) and effectiveness (MAP@1000) were measured on two query sets: 201-250, and 251-300.
-
-### Retrieval Models
-
-###### ATIRE
-+ ATIRE uses a modified version of BM25, described [here](http://www.cs.otago.ac.nz/homepages/andrew/papers/2012-1.pdf).
-+ Searching was done using top-k search also described in the above paper.
-  + This is not early termination, all documents for all terms in the query still get scored.
-+ BM25 parameters were set to the default for ATIRE, `k1=0.9 b=0.4`.
-+ Only stopping of tags was performed, this has no effect on search.
-
-###### MG4J
-
-See the description for the [Gov2 runs](Gov2.md).
-
-### Retrieval Latency
-The table below shows the average search time across queries by query set. The search times were taken from the internal reporting of each systems.
-
-System  | Model          | Index             | Topics 201-250 | Topics 251-300
-:-------|:---------------|-------------------|---------------:|--------------:
-ATIRE   | BM25           | Count             |          809ms |          788ms
-ATIRE   | Quantized BM25 | Count + Quantized |          290ms |          296ms
-JASS    |                |                   |          222ms |          261ms
-JASS    | 5M Postings    |                   |          103ms |           88ms
-MG4J    | BM25           | Count             |          706ms |          570ms
-MG4J    | Model B        | Count             |           60ms |           73ms
-MG4J    | Model B+       | Position          |          122ms |          258ms
-
-### Retrieval Effectiveness
-The systems generated run files to be consumed by the `trec_eval` tool. Each system was evaluated on the top 1000 results for each query, and the table below shows the MAP scores for the systems.
-
-System  | Model          | Index             | Topics 201-250 | Topics 251-300
-:-------|:---------------|-------------------|---------------:|--------------:
-ATIRE   | BM25           | Count             |         0.0439 |         0.0196
-ATIRE   | Quantized BM25 | Count + Quantized |         0.0429 |         0.0201
-JASS    |                |                   |         0.0429 |         0.0201
-JASS    | 5M Postings    |                   |         0.0393 |         0.0193
-MG4J    | BM25           | Count             |         0.0410 |         0.0207
-MG4J    | Model B        | Count             |         0.0418 |         0.0206
-MG4J    | Model B+       | Position          |         0.0402 |         0.0166
-
-##### Statistical Analysis
-
-**TODO:** Need to run statistical analyses.
