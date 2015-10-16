@@ -45,7 +45,9 @@ For the TREC collection there were a total of 7 systems that provided such scrip
 System  | Model 	   | Stop  | Stem  | bg      | de      | es      | fa      | fi      | fr      |
 
 :-------| :----------- | :---- | :---- | :------ | :------ | :------ | :------ | :------ | :------ |
-Terrier | BM25         |  ![valid XHTML][checkmark] 	   |       | 0.2092  | 0.2733  | 0.3627  | 0.4033  | 0.3464	 | --	   |
+Terrier | BM25         |   	   |       | 0.2092  | 0.2733  | 0.3627  | 0.4033  | 0.3464	 | --	   |
+
+
 	Terrier 	& BM25			& \checkmark	& 			& 0.2081 	& 0.2742 	& 0.3656 	& 0.4022	& 0.3392	& --	\\
 	Terrier 	& BM25			&			& \checkmark	& -- 		& 0.3194 	& 0.4347 	& -- 		& 0.4339	& --	\\
 	Terrier 	& BM25			& \checkmark	& \checkmark	& -- 		& 0.3215 	& 0.4356 	& --		& 0.4278	& --	\\
