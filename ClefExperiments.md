@@ -39,7 +39,7 @@ Swedish		| AH Mono SV 		| 91-109; 111-159; 161-166; <br /> 168-190; 192-193; 195
 
 # Retrieval Effectiveness
 
-For the TREC collection there were a total of 7 systems that provided such scripts: ATIRE, Galago, Indri, JASS, Lucene, MG4J, and Terrier. The scripts were free to index and search with varying parameters. As a result, a total of 13 different indexes were generated, and 17 sets of search results. For the CLEF collections there were 3 systems together with their required scripts: Indri, Lucene, Terrier; in the case of Terrier different retrieval models (BM25, Hiemstra LM, PL2, and TFIDF) were experimented in conjunction with different configurations for [stop lists](http://members.unine.ch/jacques.savoy/clef/index.html) and [stemmers](https://github.com/snowballstem). All the details about the experiments (MAP@1000 calculated by *trec_eval* are reported in the table below.
+For the TREC collection there were a total of 7 systems that provided such scripts: ATIRE, Galago, Indri, JASS, Lucene, MG4J, and Terrier. The scripts were free to index and search with varying parameters. As a result, a total of 13 different indexes were generated, and 17 sets of search results. For the CLEF collections there were 3 systems together with their required scripts: Indri, Lucene, Terrier; in the case of Terrier different retrieval models (BM25, Hiemstra LM, PL2, and TFIDF) were experimented in conjunction with different configurations for [stop lists](http://members.unine.ch/jacques.savoy/clef/index.html) and [stemmers](https://github.com/snowballstem). All the details about the experiments (MAP@1000 calculated by *trec_eval* are reported in the tables below.
 
 
 System  | Model 	   | Stop  | Stem  | bg      | de      | es      | fa      | fi      | fr      |
@@ -62,6 +62,26 @@ Terrier | TFIDF		   |	   | ✔	   | -- 	 | 0.3185  | 0.4313  | -- 	   | 0.4354  
 Terrier | TFIDF		   | ✔	   | ✔	   | --		 | 0.3167  | 0.4355  | -- 	   | 0.4269	 | --	   |
 Lucene	| BM25   	   | ✔     | ✔	   | --	     | 0.3126  | 0.4251	 | 0.4158  | -- 	 | 0.3865  |
 Indri	| LM Dirichlet | ✔	   | ✔	   | 0.2051  | 0.1365  | 0.3334	 | 0.3735  | --		 | 0.1444  |
-	
 
+
+System  | Model 	   | Stop  | Stem  | hu      | it      | nl      | pt      | ru      | sv      |
+:-------|:-------------|:------|:------|:--------|:--------|:--------|:--------|:--------|:--------|
+Terrier | BM25		   | 	   |	   | 0.2115  | 0.3233  | 0.3958	 | 0.3250  | 0.3666	 | 0.3384  |
+Terrier | BM25		   | ✔     | 	   | 0.2178	 | 0.3182  | 0.3974	 | 0.3255  | 0.3449	 | 0.3371  |
+Terrier | BM25		   |	   | ✔     | 0.3175	 | 0.3619  | 0.4209  | 0.3250  | 0.4740	 | 0.3817  |
+Terrier | BM25		   | ✔     | ✔	   | 0.3254  | 0.3591  | 0.4234  | 0.3255  | 0.4753	 | 0.3886  |
+Terrier | Hiemstra LM  | 	   |	   | 0.1642	 | 0.2778  | 0.3454  | 0.2738  | 0.2922	 | 0.3113  |
+Terrier | Hiemstra LM  | ✔	   | 	   | 0.1685	 | 0.2820  | 0.3523	 | 0.2742  | 0.2949	 | 0.3160  |
+Terrier | Hiemstra LM  |	   | ✔	   | 0.2559  | 0.3061  | 0.3585	 | 0.2738  | 0.3891	 | 0.3372  |
+Terrier | Hiemstra LM  | ✔	   | ✔     | 0.2656  | 0.3092  | 0.3680  | 0.2742  | 0.3960	 | 0.3402  |
+Terrier | PL2		   | 	   |	   | 0.2060  | 0.3110  | 0.3792  | 0.3183  | 0.3433	 | 0.3149  |
+Terrier | PL2		   | ✔     | 	   | 0.2091	 | 0.3090  | 0.3832	 | 0.3184  | 0.3288	 | 0.3222  |
+Terrier | PL2		   |	   | ✔	   | 0.3040  | 0.3521  | 0.4042  | 0.3183  | 0.4737	 | 0.3604  |
+Terrier | PL2		   | ✔	   | ✔	   | 0.3179	 | 0.3472  | 0.4088	 | 0.3184  | 0.4711	 | 0.3708  |
+Terrier | TFIDF		   | 	   |	   | 0.2107  | 0.3238  | 0.3946  | 0.3230  | 0.3643  | 0.3344  |
+Terrier | TFIDF		   | ✔	   | 	   | 0.2181  | 0.3205  | 0.3975  | 0.3258  | 0.3403	 | 0.3354  |
+Terrier | TFIDF		   |	   | ✔	   | 0.3105  | 0.3675  | 0.4222  | 0.3230  | 0.4764  | 0.3789  |
+Terrier | TFIDF		   | ✔	   | ✔	   | 0.3252  | 0.3649  | 0.4253  | 0.3258  | 0.4647  | 0.3869  |
+Lucene	| BM25		   | ✔	   | ✔	   | 0.3233  | 0.3486  | 0.4172  | --	   | 0.4717  | 0.3775  |
+Indri	| LM Dirichlet | ✔	   | ✔	   | 0.2381  | 0.0984  | 0.2486  | --	   | 0.2991  | 0.3265  |
 
