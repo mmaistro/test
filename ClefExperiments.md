@@ -1,6 +1,6 @@
 # CLEF Test Collections
 
-Developers of each system were invited to create scripts that would index and search across several test collections from [TREC](http://trec.nist.gov/) and [CLEF](http://www.clef-initiative.eu). The TREC collection considered in these experiments is the GOV2 collection with three sets of TREC queries: 701--750, 751--800, and 801--850.  The table below summarizes the main details about the CLEF collections in 12 different European and non-European languages, considered in the experiments; all the data can be freely downloaded by means of the [DIRECT](http://direct.dei.unipd.it/) system.
+Developers of each system were invited to create scripts that would index and search across [CLEF](http://www.clef-initiative.eu). The table below summarizes the main details about the CLEF collections in 12 different European and non-European languages, considered in the experiments; all the data can be freely downloaded by means of the [DIRECT](http://direct.dei.unipd.it/) system.
 
 
 ## Test Collections
@@ -39,7 +39,7 @@ Swedish		| AH Mono SV 		| 91-109; 111-159; 161-166; <br /> 168-190; 192-193; 195
 
 # Retrieval Effectiveness
 
-For the TREC collection there were a total of 7 systems that provided such scripts: ATIRE, Galago, Indri, JASS, Lucene, MG4J, and Terrier. The scripts were free to index and search with varying parameters. As a result, a total of 13 different indexes were generated, and 17 sets of search results. For the CLEF collections there were 3 systems together with their required scripts: Indri, Lucene, Terrier; in the case of Terrier different retrieval models (BM25, Hiemstra LM, PL2, and TFIDF) were experimented in conjunction with different configurations for [stop lists](http://members.unine.ch/jacques.savoy/clef/index.html) and [stemmers](https://github.com/snowballstem). All the details about the experiments (MAP@1000 calculated by *trec_eval* are reported in the tables below.
+For the CLEF collections there were 3 systems together with their required scripts: Indri, Lucene, Terrier; in the case of Terrier different retrieval models (BM25, Hiemstra LM, PL2, and TFIDF) were experimented in conjunction with different configurations for [stop lists](http://members.unine.ch/jacques.savoy/clef/index.html) and [stemmers](https://github.com/snowballstem). All the details about the experiments (MAP@1000 calculated by *trec_eval* are reported in the tables below.
 
 
 System  | Model 	   | Stop  | Stem  | bg      | de      | es      | fa      | fi      | fr      |
@@ -85,3 +85,14 @@ Terrier | TFIDF		   | ✔	   | ✔	   | 0.3252  | 0.3649  | 0.4253  | 0.3258  | 
 Lucene	| BM25		   | ✔	   | ✔	   | 0.3233  | 0.3486  | 0.4172  | --	   | 0.4717  | 0.3775  |
 Indri	| LM Dirichlet | ✔	   | ✔	   | 0.2381  | 0.0984  | 0.2486  | --	   | 0.2991  | 0.3265  |
 
+
+You can find runs and *trec_eval* results at: 
++[Terrier](https://github.com/mmaistro/IR-Reproducibility/tree/mmaistro)
++[Lucene](https://github.com/dibuccio/IR-Reproducibility)
++[Indri](https://github.com/gmdn/IR-reproducibiliy-grium)
+
+## Credits
+
+* [CLEF Initiative](http://www.clef-initiative.eu)
+
+* [Information Management Systems Research Group](http://ims.dei.unipd.it), University of Padua
